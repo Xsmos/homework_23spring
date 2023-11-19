@@ -1,0 +1,20 @@
+
+Grid = 1
+Task              = 0
+GridRank          = 3
+GridDimension     = 70 70 70 
+GridStartIndex    = 3 3 3 
+GridEndIndex      = 66 66 66 
+GridLeftEdge      = 0 0 0 
+GridRightEdge     = 1 1 1 
+Time              = 405.97624399228
+SubgridsAreStatic = 0
+NumberOfBaryonFields = 0
+NumberOfParticles   = 262144
+NumberOfActiveParticles = 0
+PresentParticleTypes = DarkMatter 
+ParticleTypeCounts = 262144 
+ParticleFileName = ./RD0009/RedshiftOutput0009.cpu0000
+GravityBoundaryType = 0
+Pointer: Grid[1]->NextGridThisLevel = 0
+Pointer: Grid[1]->NextGridNextLevel = 0

@@ -1,0 +1,75 @@
+========================================================================
+make show-version
+========================================================================
+
+Git Branch   main
+Git Revision 8dbf7969831a2a84a970177007166a7deef78085
+
+========================================================================
+gmake show-config
+========================================================================
+
+   MACHINE: GT PACE-ICE
+   MACHINE-NAME: pace-ice
+
+   PARAMETER_MAX_SUBGRIDS  [max-subgrids-###]                : 100000
+   PARAMETER_MAX_BARYONS  [max-baryons-###]                  : 30
+   PARAMETER_MAX_TASKS_PER_NODE  [max-tasks-per-node-###]    : 8
+   PARAMETER_MEMORY_POOL_SIZE  [memory-pool-###]             : 100000
+
+   CONFIG_PRECISION  [precision-{32,64}]                     : 64
+   CONFIG_PARTICLES  [particles-{32,64,128}]                 : 64
+   CONFIG_INTEGERS  [integers-{32,64}]                       : 64
+   CONFIG_PARTICLE_IDS  [particle-id-{32,64}]                : 64
+   CONFIG_INITS  [inits-{32,64}]                             : 64
+   CONFIG_IO  [io-{32,64}]                                   : 32
+   CONFIG_USE_MPI  [use-mpi-{yes,no}]                        : yes
+   CONFIG_TASKMAP  [taskmap-{yes,no}]                        : no
+   CONFIG_PACKED_AMR  [packed-amr-{yes,no}]                  : yes
+   CONFIG_PACKED_MEM  [packed-mem-{yes,no}]                  : no
+   CONFIG_LCAPERF  [lcaperf-{yes,no}]                        : no
+   CONFIG_PAPI  [papi-{yes,no}]                              : no
+   CONFIG_PYTHON  [python-{yes,no}]                          : no
+   CONFIG_NEW_PROBLEM_TYPES  [new-problem-types-{yes,no}]    : no
+   CONFIG_ECUDA  [cuda-{yes,no}]                             : no
+   CONFIG_OOC_BOUNDARY  [ooc-boundary-{yes,no}]              : no
+   CONFIG_ACCELERATION_BOUNDARY  [acceleration-boundary-{yes,no}] : yes
+   CONFIG_OPT  [opt-{warn,debug,cudadebug,high,aggressive}]  : debug
+   CONFIG_TESTING  [testing-{yes,no}]                        : no
+   CONFIG_PHOTON  [photon-{yes,no}]                          : yes
+   CONFIG_HYPRE  [hypre-{yes,no}]                            : no
+   CONFIG_EMISSIVITY  [emissivity-{yes,no}]                  : no
+   CONFIG_USE_HDF4  [use-hdf4-{yes,no}]                      : no
+   CONFIG_NEW_GRID_IO  [newgridio-{yes,no}]                  : yes
+   CONFIG_BITWISE_IDENTICALITY  [bitwise-{yes,no}]           : no
+   CONFIG_FAST_SIB  [fastsib-{yes,no}]                       : yes
+   CONFIG_GRAVITY_4S  [gravity-4s-{yes,no}]                  : no
+   CONFIG_ENZO_PERFORMANCE  [enzo-performance-{yes,no}]      : yes
+   CONFIG_GRACKLE  [grackle-{yes,no}]                        : no
+   CONFIG_LOG2ALLOC  [log2alloc-{yes,no}]                    : no
+   CONFIG_UUID  [uuid-{yes,no}]                              : yes
+
+========================================================================
+gmake show-flags
+========================================================================
+
+CPP = /usr/local/pace-apps/spack/packages/linux-rhel7-x86_64/gcc-4.8.5/gcc-10.3.0-o57x6h2gubo7bzh7evmy4mvibdqrlghr/bin/cpp
+CC  = /usr/local/pace-apps/spack/packages/linux-rhel7-x86_64/gcc-10.3.0/mvapich2-2.3.6-ouywalrqjnakjlhjxgunwqssb3iongrc/bin/mpicc
+CXX = /usr/local/pace-apps/spack/packages/linux-rhel7-x86_64/gcc-10.3.0/mvapich2-2.3.6-ouywalrqjnakjlhjxgunwqssb3iongrc/bin/mpicxx
+FC  = /usr/local/pace-apps/spack/packages/linux-rhel7-x86_64/gcc-10.3.0/mvapich2-2.3.6-ouywalrqjnakjlhjxgunwqssb3iongrc/bin/mpif77
+F90 = /usr/local/pace-apps/spack/packages/linux-rhel7-x86_64/gcc-10.3.0/mvapich2-2.3.6-ouywalrqjnakjlhjxgunwqssb3iongrc/bin/mpif90
+LD  = /usr/local/pace-apps/spack/packages/linux-rhel7-x86_64/gcc-10.3.0/mvapich2-2.3.6-ouywalrqjnakjlhjxgunwqssb3iongrc/bin/mpicxx
+
+DEFINES = -DLINUX -DH5_USE_16_API   -D__max_subgrids=100000 -D__max_baryons=30 -D__max_cpu_per_node=8 -D__memory_pool_size=100000 -DINITS64 -DLARGE_INTS -DCONFIG_PINT_8 -DIO_32    -DUSE_MPI   -DCONFIG_PFLOAT_8 -DCONFIG_BFLOAT_8  -DUSE_HDF5_GROUPS   -DTRANSFER   -DNEW_GRID_IO -DFAST_SIB      -DENZO_PERFORMANCE    -DUSE_UUID -DSAB
+
+INCLUDES = -I/usr/local/pace-apps/spack/packages/linux-rhel7-x86_64/gcc-10.3.0/hdf5-1.10.8-jzwozkvmnzdcjeqp2gmf6hpwi5jqz7if/include           -I.
+
+CPPFLAGS = -P -traditional
+CFLAGS   =  -g
+CXXFLAGS =  -g
+FFLAGS   = -fno-second-underscore -ffixed-line-length-132 -std=legacy -g
+F90FLAGS = -fno-second-underscore -std=legacy -g
+LDFLAGS  =  -g
+
+LIBS     = -L/usr/local/pace-apps/spack/packages/linux-rhel7-x86_64/gcc-10.3.0/hdf5-1.10.8-jzwozkvmnzdcjeqp2gmf6hpwi5jqz7if/lib -lhdf5 -lz  -lgfortran         
+
